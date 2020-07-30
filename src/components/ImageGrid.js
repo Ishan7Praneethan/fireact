@@ -1,11 +1,21 @@
-import React from 'react';
+import React from "react";
+import useFireStore from "../hooks/useFireStore";
 
 const ImageGrid = () => {
-    return (
-        <div className="img-grid">
-            images
-        </div>
-    );
-}
+  const { docs } = useFireStore("images");
+
+  console.log(docs);
+
+  return (
+    <div className="img-grid">
+      {docs &&
+        docs.map((doc) => (
+          <div className="img-wrap" key={doc.id}>
+            <img src={doc.url} />
+          </div>
+        ))}
+    </div>
+  );
+};
 
 export default ImageGrid;
