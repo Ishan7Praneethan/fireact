@@ -8,7 +8,7 @@ class KommunicateChat extends Component {
 	componentDidMount() {
 		(function (d, m) {
 			var kommunicateSettings = {
-				appId: '13bcb39d34004420f9020a5c9ff38ce57',
+				appId: '2caf5263a4f41f735a66f0e4d8b15aee1',
 				popupWidget: true,
 				automaticChatOpenOnNavigation: true,
 			};
